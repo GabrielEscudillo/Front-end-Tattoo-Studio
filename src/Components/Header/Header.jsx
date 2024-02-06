@@ -5,19 +5,32 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, userData } from "../../Pages/userSlice";
+
 
 export const Header = () => {
   const navigate = useNavigate();
-  const token = localStorage.getItem("token");
+  const dispatch = useDispatch();
+  const userRdxData = useSelector(userData);
+
+  const token = userRdxData.credentials 
+  ? 
+  userRdxData.credentials.token 
+  : null;
+  const decoded = userRdxData.credentials 
+  ? 
+  userRdxData.credentials.userData 
+  : null;
+  //   const token = 3
+  // const decoded = 4
 
   const logMeOut = () => {
-    localStorage.setItem("token", "");
-    localStorage.setItem("decoded", JSON.stringify({}));
+    dispatch(logout({ credentials: {}}));
     setTimeout(() => {
-      navigate("/personajes");
+      navigate()
     });
   };
-
   return (
 <Navbar style={{ backgroundColor: '#580707' }} variant="dark" expand="lg" className="text-light" id="navbar">
   <Container>
