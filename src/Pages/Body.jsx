@@ -3,6 +3,7 @@ import { Home } from "./Home/Home";
 import { Register } from "./Register/Register";
 import { Login } from "./Login/Login";
 import { Profile } from "./Profile/Profile";
+import { Artists } from "./Artists/Artists";
 
 
 export const Body = () => {
@@ -14,8 +15,7 @@ export const Body = () => {
                 <Route path="/Register" element={<Register/>} />
                 <Route path="/Login" element={<Login/>} />
                 <Route path="/Profile" element={<Profile/>} />
-
-
+                <Route path="/Artists" element={<Artists/>} />
             </Routes>
         </>
     )

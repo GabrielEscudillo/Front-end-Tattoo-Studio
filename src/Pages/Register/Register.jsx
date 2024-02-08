@@ -1,9 +1,14 @@
 import { CustomInput } from "../../Components/CustomInput/CustomInput";
 import "./Register.css";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { login, userData } from "../userSlice";
+import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
+import { userSignUp, userLogin } from "../../Services/ApiCalls";
 
 export const Register = () => {
-  const [registerData, setRegisterData] = useState({
+  const [signUpData, setSignUpData] = useState({
     name: "",
     last_name: "",
     address: "",
@@ -13,12 +18,51 @@ export const Register = () => {
   });
 
   const inputHandler = (event) => {
-    setRegisterData((prevState) => ({
+    setSignUpData((prevState) => ({
         ...prevState,
         [event.target.name]: event.target.value,
     }));
 };
-console.table(registerData);
+
+const dispatch = useDispatch()
+
+// instancio redux en modo lectura
+const userRdxData = useSelector(userData)
+
+const navigate = useNavigate();
+
+console.table(signUpData);
+
+const buttonHandler = () => {
+        //definimos las credenciales para el futuro login con los datos de registro
+        const credentials = {
+          email: signUpData.email,
+          password: signUpData.password,
+        };
+        userSignUp(signUpData)
+        .then(() =>{
+     
+            userLogin(credentials)
+            .then((token) =>{
+              if(!token){
+                  navigate("/login");
+                  return null;
+                  }
+              const decodedToken = jwtDecode(token)
+      
+              const data = {
+                  token: token,
+                  userData: decodedToken
+              }
+              dispatch(login({credentials: data}))
+                  setTimeout(() => {
+                    navigate('/profile')
+                  });
+                
+            })
+            .catch((err) => console.error("Ha ocurrido un error", err))
+          });
+        }
   return (
     <>
       <div className="body">

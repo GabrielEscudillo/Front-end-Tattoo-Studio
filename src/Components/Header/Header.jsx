@@ -39,7 +39,7 @@ export const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="tatuadores">Artists</Nav.Link>
+        <Nav.Link href="Artists">Artists</Nav.Link>
         <NavDropdown title="My account" id="basic-nav-dropdown">
           {!token ? (
             <>
