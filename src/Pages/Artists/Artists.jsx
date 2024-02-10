@@ -1,28 +1,40 @@
-// import { useEffect, useState } from "react"
-// import { ArtistCard } from "../../Components/ArtistCard/ArtistCard";
-// import { bringAllArtist } from "../../Services/ApiCalls";
-// import "./Artists.css"
+import { useEffect, useState } from "react";
+import { ArtistCard } from "../../Components/ArtistCard/ArtistCard";
+import { bringAllArtists } from "../../Services/apiCalls";
+import "./Artists.css";
 // import { useNavigate } from "react-router-dom";
-// import { jwtDecode } from "jwt-decode";
 
-// export const Artists = () => {
+export const Artists = () => {
+  const [artists, setArtists] = useState([]);
 
-//     const [artists, setArtists] = useState([]);
-//     const [inputValue, setInputValue] = useState('');
+  useEffect(() => {
+    if (artists.length === 0) {
+      bringAllArtists().then((arts) => {
+        setArtists(arts);
+      });
+    }
+  }, []);
 
-//     const navigate = useNavigate()
-//     const inputHandler = (e) => {
-//         setInputValue(e.target.value)
-//     }
-
-//     return (
-//         <>
-//         <div className="body">
-//           {/* <h1 className="title">
-//             <div className="miDiv"></div>Welcome to <br />
-//             tattoink aqui va la gente
-//           </h1> */}
-//         </div>
-//       </>
-//     );
-// };
+  return (
+    <>
+      {/* <div className="body"> */}
+        <h1 className="team-title">Meet the team</h1>
+        <div className="artistContainer">
+          {artists.length > 0 ? (
+            artists.map((artist) => {
+              return (
+                <ArtistCard
+                  key={artist.id}
+                  name={artist.name}
+                  // photo={artist.photo}
+                />
+              );
+            })
+          ) : (
+            <p>No hay artistas para mostrar.</p>
+          )}
+        </div>
+      {/* </div> */}
+    </>
+  );
+};

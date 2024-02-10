@@ -18,7 +18,7 @@ export const userSignUp = async (signUpData) => {
   return res.data;
 };
 
-export const bringAllArtist = async ()  =>{ //Cuando esté conectada con mi backend
-    const res = await  axios.get(`${API_URL}/api/artists/list`)
-    return res.data
+export const bringAllArtists = async ()  => { 
+    const res = await axios.get(`${API_URL}/api/artists/list`)
+    return res.data.results
 }
