@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Login.css";
 import { CustomInput } from "../../Components/CustomInput/CustomInput";
-import { userLogin } from "../../Services/ApiCalls";
+import { userLogin } from "../../Services/apiCalls";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import { login, userData } from "../userSlice";

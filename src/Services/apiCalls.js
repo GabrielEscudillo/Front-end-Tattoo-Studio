@@ -22,3 +22,29 @@ export const bringAllArtists = async ()  => {
     const res = await axios.get(`${API_URL}/api/artists/list`)
     return res.data.results
 }
+
+export const bringProfile = async (token, id)  => { 
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token
+    }
+  }
+
+  const res = await axios.get(`${API_URL}/api/${id}`, config)
+  console.log(res.data)
+  return res.data
+  
+} 
+
+export const createAppointment = async (newAppointment, token) => {
+  console.log(newAppointment)
+  console.log(token)
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token.credentials.token
+    }
+  }
+  console.log(config)
+  const res = await axios.post(`${API_URL}/api/appointments/newAppointment`, newAppointment, config)
+  return res.data
+}
