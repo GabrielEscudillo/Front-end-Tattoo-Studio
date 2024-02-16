@@ -36,15 +36,13 @@ export const bringProfile = async (token, id)  => {
   
 } 
 
-export const createAppointment = async (newAppointment, token) => {
-  console.log(newAppointment)
-  console.log(token)
+export const createAppointment = async (token, appointmentData) => {
+  console.log(appointmentData)
   const config = {
     headers: {
-      Authorization: "Bearer " + token.credentials.token
+      Authorization: "Bearer " + token
     }
   }
-  console.log(config)
-  const res = await axios.post(`${API_URL}/api/appointments/newAppointment`, newAppointment, config)
-  return res.data
+  const res = await axios.post(`${API_URL}/api/appointments/newAppointment`, appointmentData, config)
+  return res
 }
