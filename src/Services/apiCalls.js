@@ -18,10 +18,11 @@ export const userSignUp = async (signUpData) => {
   return res.data;
 };
 
-export const bringAllArtists = async ()  => { 
-    const res = await axios.get(`${API_URL}/api/artists/list`)
-    return res.data.results
+export const bringAllArtists = async () => { 
+  const res = await axios.get(`${API_URL}/api/artists/list`);
+  return res.data; // Devuelve directamente res.data en lugar de res.data.results
 }
+
 
 export const bringProfile = async (token, id)  => { 
   const config = {
