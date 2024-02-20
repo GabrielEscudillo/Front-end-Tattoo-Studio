@@ -6,6 +6,7 @@ import { createAppointment, bringAllArtists } from "../../Services/apiCalls"; //
 import { userData } from "../userSlice";
 import { CustomInput } from "../../Components/CustomInput/CustomInput";
 import { jwtDecode } from "jwt-decode";
+import { Form, Button } from "react-bootstrap";
 
 export const Appointments = () => {
   const userRdxData = useSelector(userData);
@@ -16,7 +17,6 @@ export const Appointments = () => {
     date: "",
     time: "",
   });
-
   const [artists, setArtists] = useState([]);
   
   useEffect(() => {
@@ -48,7 +48,7 @@ export const Appointments = () => {
 
     createAppointment(token, newAppointment)
       .then((res) => {
-        console.log(res)
+        console.log(res);
         const decodedToken = jwtDecode(token);
         const data = {
           token: token,
@@ -69,36 +69,51 @@ export const Appointments = () => {
   };
 
   return (
-    <div className="body">
-      <div className="requiredFields">
-        <label htmlFor="artist_id">Select Artist:</label>
-        <select
-          name="artist_id"
-          value={newAppointment.artist_id}
-          onChange={inputHandler}
-        >
-          <option value="">Select an artist</option>
-          {artists.map((artist) => (
-            <option key={artist.id} value={artist.id}>
-              {artist.name}
-            </option>
-          ))}
-        </select>
-        <CustomInput
-          placeholder={"date"}
-          type={"date"}
-          name={"date"}
-          handler={inputHandler}
-        />
-        <CustomInput
-          placeholder={"time"}
-          type={"time"}
-          name={"time"}
-          handler={inputHandler}
-        />
-        <input type="submit" onClick={buttonHandler} value="Register" />
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-lg-6">
+          <Form className="mt-5">
+            <Form.Group controlId="artist_id">
+              <Form.Label>Select your Artist:</Form.Label>
+              <Form.Control
+                as="select"
+                name="artist_id"
+                value={newAppointment.artist_id}
+                onChange={inputHandler}
+              >
+                <option value="">Select an artist</option>
+                {artists.map((artist) => (
+                  <option key={artist.id} value={artist.id}>
+                    {artist.name}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+            <Form.Group controlId="date">
+              <Form.Label>Date:</Form.Label>
+              <Form.Control
+                type="date"
+                name="date"
+                value={newAppointment.date}
+                onChange={inputHandler}
+              />
+            </Form.Group>
+            <Form.Group controlId="time">
+              <Form.Label>Time:</Form.Label>
+              <Form.Control
+                type="time"
+                name="time"
+                value={newAppointment.time}
+                onChange={inputHandler}
+              />
+            </Form.Group>
+
+            <Button variant="primary" onClick={buttonHandler}>
+              Confirm
+            </Button>
+          </Form>
+        </div>
       </div>
     </div>
   );
 };
-

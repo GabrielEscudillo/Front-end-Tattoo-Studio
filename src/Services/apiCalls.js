@@ -18,32 +18,44 @@ export const userSignUp = async (signUpData) => {
   return res.data;
 };
 
-export const bringAllArtists = async () => { 
+export const bringAllArtists = async () => {
   const res = await axios.get(`${API_URL}/api/artists/list`);
-  return res.data; // Devuelve directamente res.data en lugar de res.data.results
-}
+  return res.data;
+};
 
-
-export const bringProfile = async (token, id)  => { 
+export const bringProfile = async (token, id) => {
   const config = {
     headers: {
-      Authorization: "Bearer " + token
-    }
-  }
+      Authorization: "Bearer " + token,
+    },
+  };
 
-  const res = await axios.get(`${API_URL}/api/${id}`, config)
-  console.log(res.data)
-  return res.data
-  
-} 
+  const res = await axios.get(`${API_URL}/api/${id}`, config);
+  return res.data;
+};
+
+export const updateProfile = async (token, id, updateData) => {
+  console.log(token, id, updateData)
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.patch(`${API_URL}/api/${id}`, updateData, config);
+  return res.data;
+};
 
 export const createAppointment = async (token, appointmentData) => {
-  console.log(appointmentData)
+  console.log(appointmentData);
   const config = {
     headers: {
-      Authorization: "Bearer " + token
-    }
-  }
-  const res = await axios.post(`${API_URL}/api/appointments/newAppointment`, appointmentData, config)
-  return res
-}
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.post(
+    `${API_URL}/api/appointments/newAppointment`,
+    appointmentData,
+    config
+  );
+  return res;
+};
