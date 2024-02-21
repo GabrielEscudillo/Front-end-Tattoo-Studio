@@ -59,3 +59,17 @@ export const createAppointment = async (token, appointmentData) => {
   );
   return res;
 };
+
+
+export const bringAppointments = async (token, id) => {
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+
+  const res = await axios.get(`${API_URL}/api/appointments/mysessions/${id}`, config);
+  return res.data;
+};
+
+
