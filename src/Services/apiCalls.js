@@ -35,7 +35,7 @@ export const bringProfile = async (token, id) => {
 };
 
 export const updateProfile = async (token, id, updateData) => {
-  console.log(token, id, updateData)
+  console.log(token, id, updateData);
   const config = {
     headers: {
       Authorization: "Bearer " + token,
@@ -60,7 +60,6 @@ export const createAppointment = async (token, appointmentData) => {
   return res;
 };
 
-
 export const bringAppointments = async (token, id) => {
   const config = {
     headers: {
@@ -68,8 +67,38 @@ export const bringAppointments = async (token, id) => {
     },
   };
 
-  const res = await axios.get(`${API_URL}/api/appointments/mysessions/${id}`, config);
+  const res = await axios.get(
+    `${API_URL}/api/appointments/mysessions/${id}`,
+    config
+  );
   return res.data;
 };
 
+export const updateAppointment = async (token, id, updatedAppointment) => {
+  console.log(token, id, updatedAppointment);
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.patch(
+    `${API_URL}/api/appointments/${id}`,
+    updatedAppointment,
+    config
+  );
+  return res.data;
+};
 
+export const DeleteAppointment = async (token, id) => {
+  console.log(token, id);
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.delete(
+    `${API_URL}/api/appointments/${id}`,
+    config
+  );
+  return res;
+};
