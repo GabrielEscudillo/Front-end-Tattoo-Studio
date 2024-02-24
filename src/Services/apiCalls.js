@@ -112,3 +112,14 @@ export const bringAllUsers = async (token) => {
   const res = await axios.get(`${API_URL}/api/users/getall`, config);
   return res.data;
 };
+
+export const removeUser = async (token, id) => {
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.delete(`${API_URL}/api/delete/${id}`, config);
+  return res.data;
+};
+
