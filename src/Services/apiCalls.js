@@ -123,3 +123,24 @@ export const removeUser = async (token, id) => {
   return res.data;
 };
 
+export const bringArtistAppointments = async (token, id) => {
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.get(`${API_URL}/api//appointments/myappointments/${id}`, config);
+  console.log(res.data)
+  return res.data;
+};
+
+export const bringAllAppointments = async (token) => {
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.get(`${API_URL}/api/appointments/get`, config);
+  console.log(res.data)
+  return res.data;
+};
