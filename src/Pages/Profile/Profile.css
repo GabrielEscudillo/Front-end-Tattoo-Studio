@@ -47,12 +47,13 @@ img {
 
 .profile-card-title {
   color: #ffffff; /* Color del título */
-  font-size: 300%; /* Tamaño del título */
+  /* font-size: 300%; */
   background-color: #000000;
   font-family: "Gill Sans";
   display: flex;
   justify-content: center;
   margin-top: -3%;
+  font-size: 3.5rem; /*calc*/
 }
 
 .list-group-item {

@@ -102,3 +102,13 @@ export const DeleteAppointment = async (token, id) => {
   );
   return res;
 };
+
+export const bringAllUsers = async (token) => {
+  const config = {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+  const res = await axios.get(`${API_URL}/api/users/getall`, config);
+  return res.data;
+};
