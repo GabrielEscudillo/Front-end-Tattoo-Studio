@@ -70,3 +70,7 @@ img {
   height: 100%;
 }
 
+#custom-card-profile {
+  background-color: #000c18;
+  color: white;
+}
