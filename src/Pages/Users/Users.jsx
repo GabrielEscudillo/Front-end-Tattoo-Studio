@@ -31,7 +31,7 @@ export const Users = () => {
         {users && users.length > 0 ? (
           users.map((user) => (
             <div className="col-md-4 mb-4" key={user.id}>
-              <Card>
+              <Card className="shadow-sm appointment-card" id="custom-card">
                 <Card.Body>
                   <Card.Title>
                     {user.name} {user.last_name}
