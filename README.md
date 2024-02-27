@@ -1,5 +1,4 @@
 <h1 align="center">⚜️TATTOINK⚜️</h1>
-<p align="center">_______________________________________________</p>
 
 <details>
   <summary>Content 📝</summary>
@@ -7,7 +6,7 @@
   <li><a href="#objective">Objective</a></li>
   <li><a href="#features">Features</a></li> 
   <li><a href="#technologies-used">Technologies Used</a></li>
-  <li><a href="#database-diagram">Database Diagram</a></li>
+  <li><a href="#installation-instructions">Installation Instructions</a></li>
   <li><a href="#endpoints">Endpoints</a></li>
   <li><a href="#future-functionalities">Future Functionalities</a></li>
   <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -56,22 +55,53 @@ The goal of this endeavor is to craft a polished and professional frontend appli
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/bootstrap/bootstrap-plain.svg" title="Bootstrap" alt="Bootstrap" width="40" height="40"></a 
 </p>
 
-## Database Diagram
+## Installation Instructions
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/GabrielEscudillo/Front-end-Tattoo-Studio
+    cd front-end-tattoo-studio
+    ```
+
+2. **Install Frontend Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Configure the Backend:**
+
+    - Begin by creating a MySQL database.
+    - Follow the backend installation instructions provided in the [BackEnd-Tattoo-Studio repository](https://github.com/GabrielEscudillo/BackEnd-Tattoo-Studio).
+
+4. **Install Backend Dependencies:**
+    ```bash
+    npm install
+    ```
+
+5. **Start the Application:**
+    - Navigate to the frontend directory and run `npm run dev` to start the frontend.
+    - Similarly, in the backend directory, execute `npm run dev` to initiate the backend server.
+
+The application will be accessible via [http://localhost:5173/](http://localhost:5173/) for the frontend and [http://localhost:3000/](http://localhost:3000/) for the backend.
+
+Enjoy exploring the Tattoo Studio application and unleash your creativity!
+
 
 ## Endpoints
 
 ## Future Functionalities
-#### Users:
+
+- **Users**
 
 📧 Email Verification: Validate your account through email verification, enhancing security and preventing unauthorized access.
 
 🔍 Password Recovery: Easily recover forgotten passwords through a streamlined process, ensuring uninterrupted access to your account.
 
-#### Artists:
+- **Artists**
 
 🎨 Portfolio Showcase: Display your artwork in a stunning portfolio, showcasing your talent and style to potential clients.
 
-#### SuperAdmin:
+- **SuperAdmin**
 
 🚀 Feature Customization: Customize and configure platform features according to business needs and requirements, ensuring flexibility and scalability.
 
