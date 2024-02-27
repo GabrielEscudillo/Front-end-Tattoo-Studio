@@ -30,7 +30,7 @@ export const AllAppointments = () => {
 
   return (
     <Container>
-      <h1 className="text-center mt-5 mb-4">All Appointments</h1>
+      <h1 className="text-center mt-4 mb-4">All Appointments</h1>
       <Row xs={1} md={2} lg={3} className="g-4">
         {appointments && appointments.length > 0 ? (
           appointments.map((appointment) => (

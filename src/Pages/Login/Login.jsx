@@ -5,7 +5,7 @@ import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import { login, userData } from "../userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 import "./Login.css";
 
 export const Login = () => {
@@ -13,6 +13,7 @@ export const Login = () => {
     email: "",
     password: "",
   });
+  const [loginError, setLoginError] = useState(false); // State variable for login error
 
   const dispatch = useDispatch();
   const userRdxData = useSelector(userData);
@@ -29,7 +30,8 @@ export const Login = () => {
     userLogin(credentials)
       .then((token) => {
         if (!token) {
-          return null;
+          setLoginError(true); // Set login error state to true
+          return;
         }
         const decodedToken = jwtDecode(token);
         const data = {
@@ -41,7 +43,10 @@ export const Login = () => {
           navigate("/profile");
         });
       })
-      .catch((err) => console.error("Ha ocurrido un error", err));
+      .catch((err) => {
+        console.error("Ha ocurrido un error", err);
+        setLoginError(true); // Set login error state to true
+      });
   };
 
   return (
@@ -74,11 +79,19 @@ export const Login = () => {
                 Log in
               </Button>
             </Form>
-            <p className="mt-3">Don't have an account? <a href="/register">Sign up</a></p>
+            {loginError && ( // Conditionally render login error message
+              <Alert variant="danger" className="mt-3">
+                Invalid email or password. Please try again.
+              </Alert>
+            )}
+            <p className="mt-3">
+              Don't have an account? <a href="/register">Sign up</a>
+            </p>
           </div>
         </Col>
       </Row>
     </Container>
   );
 };
+
 

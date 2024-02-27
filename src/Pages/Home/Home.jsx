@@ -6,7 +6,7 @@ export const Home = () => {
     <>
       <div className="body">
         <h1 className="title">
-          <div className="miDiv"></div>Welcome to tattoink <br />
+          <div className="miDiv"></div>Welcome to tattooink <br />
           Where Art Meets Skin
         </h1>
       </div>

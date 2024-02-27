@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Form, Button, Container, Alert } from "react-bootstrap"; // Importa Alert desde react-bootstrap
 import { useDispatch, useSelector } from "react-redux";
 import { login, userData } from "../userSlice";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { userSignUp, userLogin } from "../../Services/apiCalls";
-import "./Register.css"
+import "./Register.css";
 
 export const Register = () => {
   const [signUpData, setSignUpData] = useState({
@@ -16,6 +16,7 @@ export const Register = () => {
     password: "",
     phone_number: "",
   });
+  const [showError, setShowError] = useState(false); // State variable para mostrar el mensaje de error
 
   const inputHandler = (event) => {
     setSignUpData((prevState) => ({
@@ -30,6 +31,18 @@ export const Register = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    // Check if all fields are filled
+    if (
+      !signUpData.name ||
+      !signUpData.last_name ||
+      !signUpData.address ||
+      !signUpData.email ||
+      !signUpData.password ||
+      !signUpData.phone_number
+    ) {
+      setShowError(true); // Mostrar mensaje de error
+      return;
+    }
     try {
       await userSignUp(signUpData);
       const credentials = {
@@ -126,11 +139,21 @@ export const Register = () => {
               required
             />
           </Form.Group>
+
+          {/* Mostrar el mensaje de error si los campos no están completos */}
+          {showError && (
+            <Alert variant="danger" onClose={() => setShowError(false)} dismissible>
+              Please fill in all fields
+            </Alert>
+          )}
+
           <Button variant="primary" type="submit" className="w-100">
             Register
           </Button>
         </Form>
-        <p className="mt-3">Already have an account? <a href="/login">login</a></p>
+        <p className="mt-3">
+          Already have an account? <a href="/login">login</a>
+        </p>
       </div>
     </Container>
   );
