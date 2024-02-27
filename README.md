@@ -1,4 +1,5 @@
 <h1 align="center">⚜️TATTOINK⚜️</h1>
+<p align="center">_______________________________________________</p>
 
 <details>
   <summary>Content 📝</summary>
@@ -51,21 +52,26 @@ The goal of this endeavor is to craft a polished and professional frontend appli
 
 ## Technologies Used
 
+<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a>  <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg"><img src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/npm/npm-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/bootstrap/bootstrap-plain.svg" title="Bootstrap" alt="Bootstrap" width="40" height="40"></a 
+</p>
+
 ## Database Diagram
 
 ## Endpoints
 
 ## Future Functionalities
-Users:
+#### Users:
+
 📧 Email Verification: Validate your account through email verification, enhancing security and preventing unauthorized access.
 
 🔍 Password Recovery: Easily recover forgotten passwords through a streamlined process, ensuring uninterrupted access to your account.
 
-Artists:
+#### Artists:
 
 🎨 Portfolio Showcase: Display your artwork in a stunning portfolio, showcasing your talent and style to potential clients.
 
-SuperAdmin:
+#### SuperAdmin:
 
 🚀 Feature Customization: Customize and configure platform features according to business needs and requirements, ensuring flexibility and scalability.
 
@@ -74,7 +80,8 @@ SuperAdmin:
 
 ## Acknowledgements
 
--
+- I extend my heartfelt gratitude to the collaborative efforts of my esteemed colleagues [Erika Orlando](https://github.com/AkireOrl) and [Hector Soriano](https://github.com/HSoriano99). Throughout this journey, we maintained constant communication, providing mutual support and guidance to one another, fostering a profound sense of teamwork and camaraderie.
+
 
 ## Author
 
