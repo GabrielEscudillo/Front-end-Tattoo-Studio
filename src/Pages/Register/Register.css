@@ -8,3 +8,17 @@
     align-items: center;
 } */
 
+#signUpBox {
+    background-color: #101010!important;
+    color: rgb(178, 178, 178);
+    width: 48vw;
+    margin: auto;
+  }
+  
+  /* Media query para dispositivos con un ancho máximo de 768px (tamaño de pantalla típico de dispositivos móviles) */
+  @media (max-width: 768px) {
+    #signUpBox {
+      width: 90%; /* Cambia el ancho del cuadro de registro para adaptarse a dispositivos móviles */
+    }
+  }
+  
