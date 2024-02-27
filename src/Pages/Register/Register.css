@@ -10,7 +10,7 @@
 
 #signUpBox {
     background-color: #101010!important;
-    color: rgb(178, 178, 178);
+    color: #a4a4a4; /* Color del título */
     width: 48vw;
     margin: auto;
   }

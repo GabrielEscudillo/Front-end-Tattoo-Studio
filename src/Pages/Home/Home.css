@@ -9,7 +9,7 @@
 }
 
 .title {
-  color: rgb(156, 156, 156);
+  color: #a4a4a4; /* Color del título */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -34,7 +34,7 @@
 
 .container-bg {
   background-color: rgb(8, 8, 8);
-  color: rgb(156, 156, 156);
+  color: #a4a4a4; /* Color del título */
 }
 
 .main-img2 {

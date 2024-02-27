@@ -1,5 +1,5 @@
 .logInBox {
-    color: #909090;
+    color: #a4a4a4; /* Color del título */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

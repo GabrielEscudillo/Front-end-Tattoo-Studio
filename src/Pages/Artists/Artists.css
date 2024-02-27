@@ -1,5 +1,6 @@
 .team-title {
   text-align: center;
+  color: #a4a4a4; /* Color del título */
 }
 
 .artist-container {
@@ -27,7 +28,7 @@
 .artist-info {
   display: flex;
   justify-content: center;
-  color: rgb(161, 161, 161);
+  color: #a4a4a4; /* Color del título */
 }
 
 .artist-name {
