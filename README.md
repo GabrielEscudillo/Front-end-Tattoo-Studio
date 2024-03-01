@@ -25,16 +25,33 @@ The goal of this endeavor is to craft a polished and professional frontend appli
 🔐 Effortless Registration: Users can easily sign up and input their information to create an account.
 
 <p align="center">
-  <img src="C:\Users\gabri\OneDrive\Escritorio\FSDONLINE\Proyectos\Proyecto5-tattoink-FrontEnd\tattoink\src\assets\register.png" />
+  <img src= "./src/assets/register.png" />
 </p>
 
 🔑 Login: Access your account seamlessly with a user-friendly login process, ensuring quick and convenient access to all features.
 
+<p align="center">
+  <img src= "./src/assets/login.png" />
+</p>
+
 📝 User Profile modification: made a mistake while signing up? there's nothing to worry about, users can modify their information by themselves.
+
+<p align="center">
+  <img src= "./src/assets/update.png" />
+</p>
 
 🗓️ Appointment Management: Manage your schedule efficiently with an intuitive appointment system, allowing seamless booking and rescheduling.
 
+<p align="center">
+  <img src= "./src/assets/appointments.png" />
+</p>
+
 🎨 Discover Talented Artists: Dive into our handpicked collection of skilled tattoo artists.
+
+<p align="center">
+  <img src= "./src/assets/artist.png" />
+</p>
+
 </details>
 <details>
 <summary>Artist Features</summary>
@@ -91,7 +108,7 @@ The application will be accessible via [http://localhost:5173/](http://localhost
 Enjoy exploring the Tattoo Studio application and unleash your creativity!
 
 
-## Endpoints
+<!-- ## Endpoints -->
 
 ## Future Functionalities
 
