@@ -15,6 +15,7 @@ export const Register = () => {
     email: "",
     password: "",
     phone_number: "",
+    photo: "",
   });
   const [showError, setShowError] = useState(false); // State variable para mostrar el mensaje de error
 
@@ -139,7 +140,17 @@ export const Register = () => {
               required
             />
           </Form.Group>
-
+          <Form.Group controlId="formphoto">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              type="link"
+              placeholder="Enter your photo"
+              name="photo"
+              value={signUpData.photo}
+              onChange={inputHandler}
+              required
+            />
+          </Form.Group>
           {/* Mostrar el mensaje de error si los campos no están completos */}
           {showError && (
             <Alert variant="danger" onClose={() => setShowError(false)} dismissible>

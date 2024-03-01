@@ -24,6 +24,10 @@ The goal of this endeavor is to craft a polished and professional frontend appli
 <summary>User Features</summary>
 🔐 Effortless Registration: Users can easily sign up and input their information to create an account.
 
+<p align="center">
+  <img src="C:\Users\gabri\OneDrive\Escritorio\FSDONLINE\Proyectos\Proyecto5-tattoink-FrontEnd\tattoink\src\assets\register.png" />
+</p>
+
 🔑 Login: Access your account seamlessly with a user-friendly login process, ensuring quick and convenient access to all features.
 
 📝 User Profile modification: made a mistake while signing up? there's nothing to worry about, users can modify their information by themselves.
