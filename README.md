@@ -1,4 +1,4 @@
-<h1 align="center">⚜️TATTOINK⚜️</h1>
+<h1 align="center">⚜️TATTOOINK⚜️</h1>
 
 <details>
   <summary>Content 📝</summary>
