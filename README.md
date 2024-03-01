@@ -58,15 +58,19 @@ The goal of this endeavor is to craft a polished and professional frontend appli
 
 📅 Appointment Management: Artists can effortlessly view their scheduled appointments along with detailed information about the users they are scheduled with.
 
+<p align="center">
+  <img src= "./src/assets/artistAppointments.png" />
+</p>
+
 </details>
 <details>
 <summary>Superadmin Features</summary>
 
 📊 Data Management: Oversee and manage all data within the platform, including user information and appointments
 
-🚀 Feature Customization: Customize and configure platform features according to business needs and requirements, ensuring flexibility and scalability.
-
-🔧 System Maintenance: Perform system updates, maintenance tasks, and troubleshooting to keep the platform running smoothly and efficiently.
+<p align="center">
+  <img src= "./src/assets/superAdmin.png" />
+</p>
 
 </details>
 
@@ -128,6 +132,7 @@ Enjoy exploring the Tattoo Studio application and unleash your creativity!
 
 🎨 Artist Creation and Portfolio Management: SuperAdmin will have the capability to create artist profiles and store their portfolios, showcasing their work to potential clients.
 
+🔧 System Maintenance: Perform system updates, maintenance tasks, and troubleshooting to keep the platform running smoothly and efficiently.
 
 ## Acknowledgements
 
