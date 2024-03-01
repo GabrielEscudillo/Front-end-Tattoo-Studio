@@ -136,7 +136,8 @@ Enjoy exploring the Tattoo Studio application and unleash your creativity!
 
 ## Acknowledgements
 
-- I extend my heartfelt gratitude to the collaborative efforts of my esteemed colleagues [Erika Orlando](https://github.com/AkireOrl) and [Hector Soriano](https://github.com/HSoriano99). Throughout this journey, we maintained constant communication, providing mutual support and guidance to one another, fostering a profound sense of teamwork and camaraderie.
+- I extend my heartfelt gratitude to the collaborative efforts of my esteemed colleagues [Erika Orlando](https://github.com/AkireOrl) and [Hector Soriano](https://github.com/HSoriano99), as well as my professor Demian. Throughout this journey, we maintained constant communication, providing mutual support and guidance to one another, fostering a profound sense of teamwork and camaraderie.
+I also wish to express my gratitude to my instructor, Demian, whose guidance and support have been instrumental throughout this collaborative endeavor.
 
 
 ## Author
@@ -144,7 +145,7 @@ Enjoy exploring the Tattoo Studio application and unleash your creativity!
 - **Gabriel Escudillo**
 
 ## Contact
-
+<div align="center">
 <a href = "gabrielescudillo@gmail.com"  target="_blank">
 <img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
 </a>
@@ -154,3 +155,4 @@ Enjoy exploring the Tattoo Studio application and unleash your creativity!
 <a href="https://www.linkedin.com/in/gabriel-escudillo-b8b436134/" target="_blank">
 <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" >
 </a>
+</div>
