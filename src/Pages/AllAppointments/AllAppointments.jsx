@@ -34,7 +34,7 @@ export const AllAppointments = () => {
       <Row xs={1} md={2} lg={3} className="g-4">
         {appointments && appointments.length > 0 ? (
           appointments.map((appointment) => (
-            <Col key={`${appointment.id}-${appointment.date}-${appointment.time}`}>
+            <Col key={`${appointment.id}`}>
               <Card className="shadow-sm appointment-card" id="custom-card">
                 <Card.Body>
                   <Card.Title className="text-center fs-5">Artist: {appointment.artist_name}</Card.Title>

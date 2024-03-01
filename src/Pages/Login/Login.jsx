@@ -13,7 +13,7 @@ export const Login = () => {
     email: "",
     password: "",
   });
-  const [loginError, setLoginError] = useState(false); // State variable for login error
+  const [loginError, setLoginError] = useState(false); 
 
   const dispatch = useDispatch();
   const userRdxData = useSelector(userData);
@@ -30,7 +30,7 @@ export const Login = () => {
     userLogin(credentials)
       .then((token) => {
         if (!token) {
-          setLoginError(true); // Set login error state to true
+          setLoginError(true); 
           return;
         }
         const decodedToken = jwtDecode(token);
@@ -45,7 +45,7 @@ export const Login = () => {
       })
       .catch((err) => {
         console.error("Ha ocurrido un error", err);
-        setLoginError(true); // Set login error state to true
+        setLoginError(true); 
       });
   };
 
@@ -79,7 +79,7 @@ export const Login = () => {
                 Log in
               </Button>
             </Form>
-            {loginError && ( // Conditionally render login error message
+            {loginError && ( 
               <Alert variant="danger" className="mt-3">
                 Invalid email or password. Please try again.
               </Alert>

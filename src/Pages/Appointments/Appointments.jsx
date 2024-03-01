@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Appointments.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { createAppointment, bringAllArtists } from "../../Services/apiCalls"; // Asegúrate de importar bringAllArtists desde tus apiCalls
+import { createAppointment, bringAllArtists } from "../../Services/apiCalls"; // 
 import { userData } from "../userSlice";
 import { CustomInput } from "../../Components/CustomInput/CustomInput";
 import { jwtDecode } from "jwt-decode";
@@ -22,7 +22,6 @@ export const Appointments = () => {
   useEffect(() => {
     if (artists.length === 0) {
       bringAllArtists().then((arts) => {
-        console.log("Artists:", arts); // Imprime los datos de artists
         setArtists(arts);
       });
     }
@@ -41,8 +40,7 @@ export const Appointments = () => {
   const buttonHandler = () => {
     const token = userRdxData.credentials.token;
     if (!token) {
-      // Si el token no está presente, maneja el caso apropiadamente, por ejemplo, redireccionando al usuario a la página de inicio de sesión
-      // navigate("/login");
+      navigate("/login");
       return;
     }
 
@@ -54,17 +52,12 @@ export const Appointments = () => {
           token: token,
           userData: decodedToken,
         };
-
-        // Asegúrate de despachar la acción correcta, si es necesario
-        // dispatch(Appointments({}));
-
         setTimeout(() => {
           navigate("/profile");
         });
       })
       .catch((err) => {
         console.error("Ha ocurrido un error", err);
-        // Aquí podrías proporcionar retroalimentación al usuario o realizar otras acciones según el error
       });
   };
 

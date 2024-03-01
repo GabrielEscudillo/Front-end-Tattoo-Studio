@@ -8,7 +8,7 @@ export const Artists = () => {
   useEffect(() => {
     if (artists.length === 0) {
       bringAllArtists().then((data) => {
-        setArtists(data); // Establece los datos directamente
+        setArtists(data); 
       });
     }
   }, []);

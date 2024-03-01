@@ -19,7 +19,7 @@ export const Users = () => {
 
   const removeButtonHandler = (id) => {
     removeUser(token, id).then(() => {
-      setUsers(users.filter((user) => user.id !== id)); // Actualiza el estado excluyendo el usuario eliminado
+      setUsers(users.filter((user) => user.id !== id)); 
     });
   };
 

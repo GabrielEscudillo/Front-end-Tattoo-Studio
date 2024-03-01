@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 import { bringArtistAppointments } from "../../Services/apiCalls";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 export const ArtistAppointments = () => {
   const [myAppointments, setMyAppointments] = useState([]);
@@ -16,7 +16,7 @@ export const ArtistAppointments = () => {
         setMyAppointments(myAppointments);
       });
     }
-  }, [token, id]); // Asegúrate de incluir token y id en la lista de dependencias
+  }, [token, id]); 
 
   return (
     <Container>

@@ -9,7 +9,7 @@
 }
 
 .title {
-  color: #a4a4a4; /* Color del título */
+  color: #a4a4a4; 
   display: flex;
   flex-direction: column;
   position: relative;
@@ -20,13 +20,13 @@
 
 .text-box1 {
   text-align: justify;
-  text-justify: inter-word; /* Asegura que las palabras se justifiquen correctamente */
+  text-justify: inter-word; 
   height: 100%;
   font-size: 1.4rem;
 }
 
 .main-img {
-  height: 95%; /* Ajusta la altura de la imagen según sea necesario */
+  height: 95%; 
   width: 100%;
   border-radius: 0;
   margin-top: 1%;
@@ -34,7 +34,7 @@
 
 .container-bg {
   background-color: rgb(8, 8, 8);
-  color: #a4a4a4; /* Color del título */
+  color: #a4a4a4; 
 }
 
 .main-img2 {
